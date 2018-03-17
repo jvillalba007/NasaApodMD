@@ -39,6 +39,9 @@ public class ViewActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ViewActivity.this, ImageActivity.class);
                 intent.putExtra("HD_URL", nasaAPOD.getHdurl());
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
                 startActivity(intent);
             }
         });
