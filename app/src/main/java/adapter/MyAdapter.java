@@ -73,7 +73,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
         void bind(final NASA nasa, final OnItemClickListener listener) {
             // Procesamos los datos a renderizar
             textViewName.setText(nasa.getTitle());
-            Picasso.with(context).load(nasa.getUrl()).fit().into(imageViewPoster);
+            Picasso.with(context).load(nasa.getUrl()).error(R.mipmap.ic_launcher_foreground).fit().into(imageViewPoster);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

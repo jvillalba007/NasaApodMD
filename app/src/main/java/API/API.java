@@ -15,6 +15,7 @@ public class API {
     private static final String BASE_URL = "https://api.nasa.gov/planetary/";
     private static Retrofit retrofit=null;
     public static final String APPKEY =  "ykEnnTgMAnkzZJJOIPMZSN9QmsIDFsNrEBAnvNwB";
+    public static final int cantElementos =  29;
 
     public static Retrofit getApi()
     {

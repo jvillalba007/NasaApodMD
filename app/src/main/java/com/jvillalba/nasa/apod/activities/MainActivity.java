@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.setHasFixedSize(true);
 
         // Enlazamos el layout manager y adaptor directamente al recycler view
         mRecyclerView.setLayoutManager(mLayoutManager);

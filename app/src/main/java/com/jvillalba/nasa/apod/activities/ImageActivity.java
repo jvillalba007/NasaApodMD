@@ -2,7 +2,6 @@ package com.jvillalba.nasa.apod.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBar;
@@ -92,22 +91,7 @@ public class ImageActivity extends AppCompatActivity {
             }
         });
 
-        Picasso.with(this).load(hdURL).into((ImageView) mContentView);
-
-        mContentView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                Uri intentUri = Uri.parse(hdURL);
-
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(intentUri);
-                startActivity(intent);
-                return true;
-            }
-        });
-
-
+        Picasso.with(this).load(hdURL).error(R.mipmap.ic_launcher_foreground).into((ImageView) mContentView);
 
     }
 

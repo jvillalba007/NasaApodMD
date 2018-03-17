@@ -1,23 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<android.support.v7.widget.CardView
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:foreground="?android:attr/selectableItemBackground"
-    card_view:cardBackgroundColor="#E2E2E2"
-    card_view:cardCornerRadius="0dp">
-
-    <ImageView
-        android:id="@+id/imageAPOD"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</android.support.v7.widget.CardView>
+    android:layout_height="match_parent"
+    android:background="#FF424242">
 
     <TextView
         android:id="@+id/textTitle"
@@ -25,10 +9,46 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:background="@android:color/black"
+        android:fontFamily="cursive"
+        android:lines="1"
+        android:text=""
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_below="@+id/textTitle"
+        card_view:cardBackgroundColor="@android:color/black"
+        card_view:cardCornerRadius="0dp">
+
+        <ImageView
+            android:id="@+id/imageAPOD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/cardView"
-        android:layout_marginTop="10dp"
-        android:text="Title: "
-        android:textAllCaps="true"
+        android:background="@android:color/black"
+        android:lines="1"
+        android:text="@string/copyright"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -38,23 +58,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textTitle"
+        android:layout_below="@+id/copyright"
+        android:background="#212121"
         android:text="Date: "
-        android:textAllCaps="true"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
         android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/copyright"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textDate"
-        android:text="@string/copyright"
-        android:textAllCaps="true"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/explanation"
@@ -62,10 +72,12 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/copyright"
+        android:layout_below="@+id/textDate"
+        android:fontFamily="sans-serif"
+        android:scrollbars="vertical"
         android:text="TextView"
-        android:textSize="16sp"
-        android:scrollbars = "vertical"/>
-
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

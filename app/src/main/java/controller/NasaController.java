@@ -17,7 +17,7 @@ public class NasaController {
     public void getNASAAPODS(final MyAdapter mAdapter)
     {
         NASAServices nasaServices = API.getApi().create(NASAServices.class);
-        Call<List<NASA>> call = nasaServices.getAPOD(API.APPKEY,5);
+        Call<List<NASA>> call = nasaServices.getAPOD(API.APPKEY,API.cantElementos);
 
         call.enqueue(new Callback<List<NASA>>() {
             @Override
