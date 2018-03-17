@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NASA APOD</string>
+    <string name="title_activity_view">ViewActivity</string>
+    <string name="copyright">\u00A9</string>
+
+    <string name="title_activity_image">ImageAPOD</string>
+</resources>
