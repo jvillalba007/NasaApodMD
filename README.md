@@ -5,4 +5,4 @@
 ### Description: 
 NASA Astronomy Picture of the Day with Material Design
 
-App icon by icons8
+App Icon by Icons8 (http://icons8.com/license/)
