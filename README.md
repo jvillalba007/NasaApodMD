@@ -11,3 +11,5 @@ App Icon by Icons8 (http://icons8.com/license/)
 * Read descriptions of images to learn more about them 
 * ¡Download Your Favorites Images 
 * View in FullScreen
+
+### Donate: paypal.me/fightinghawk
