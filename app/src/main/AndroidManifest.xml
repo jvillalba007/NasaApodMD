@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jvillalba.nasa.apod">
+    package="com.jvillalba.apod.dm">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.jvillalba.apod.dm.activities.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -23,16 +23,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ViewActivity"
-            android:parentActivityName=".activities.MainActivity"
+            android:name="com.jvillalba.apod.dm.activities.ViewActivity"
+            android:parentActivityName="com.jvillalba.apod.dm.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity"
+                android:value="com.jvillalba.apod.dm.activities.MainActivity"
 />
         </activity>
         <activity
-            android:name=".activities.ImageActivity"
+            android:name="com.jvillalba.apod.dm.activities.ImageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_image"
             android:theme="@style/FullscreenTheme"

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.jvillalba.nasa.apod.R;
+import com.jvillalba.apod.dm.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

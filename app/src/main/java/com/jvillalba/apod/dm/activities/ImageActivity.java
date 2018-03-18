@@ -1,4 +1,4 @@
-package com.jvillalba.nasa.apod.activities;
+package com.jvillalba.apod.dm.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.jvillalba.nasa.apod.R;
+import com.jvillalba.apod.dm.R;
 import com.squareup.picasso.Picasso;
 
 /**
