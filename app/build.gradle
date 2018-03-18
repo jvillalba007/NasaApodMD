@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.jvillalba.nasa.apod"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 3
         versionName "3.2.0"
