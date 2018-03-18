@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nasa Apod</string>
+    <string name="app_name">Nasa Apod MD</string>
     <string name="title_activity_view">ViewActivity</string>
     <string name="copyright">\u00A9</string>
 

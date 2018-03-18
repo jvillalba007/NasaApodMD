@@ -26,9 +26,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
 
     private Context context;
 
-    public void addAll(List<NASA> newList) {
+    public void addAll(List<NASA> resultList) {
+
+        List<NASA> filteredList = new ArrayList<NASA>();
+
+        for (NASA itemAPOD: resultList) {
+            if (!(itemAPOD.getMedia_type().equalsIgnoreCase("video"))) {
+                filteredList.add(itemAPOD);
+            }
+        }
+
         nasaAPOd.clear();
-        nasaAPOd.addAll(newList);
+        nasaAPOd.addAll(filteredList);
         notifyDataSetChanged();
 
     }

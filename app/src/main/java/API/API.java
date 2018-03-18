@@ -15,13 +15,13 @@ public class API {
     private static final String BASE_URL = "https://api.nasa.gov/planetary/";
     private static Retrofit retrofit=null;
     public static final String APPKEY =  "ykEnnTgMAnkzZJJOIPMZSN9QmsIDFsNrEBAnvNwB";
-    public static final int cantElementos =  29;
+    public static final int cantElements =  29;
 
     public static Retrofit getApi()
     {
         if(retrofit == null)
         {
-            if (Build.VERSION.SDK_INT >= 16 && Build.VERSION.SDK_INT <= 19)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN && Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT)
             {
                 OkHttpClient.Builder client = new OkHttpClient.Builder()
                         .followRedirects(true)
