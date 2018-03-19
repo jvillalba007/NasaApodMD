@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.jvillalba.apod.dm.R;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
+
+import static com.squareup.picasso.MemoryPolicy.NO_STORE;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -30,8 +33,8 @@ public class ImageActivity extends AppCompatActivity {
         public void run() {
             // Delayed removal of status and navigation bar
 
-            // Note that some of these constants are new as of API 16 (Jelly Bean)
-            // and API 19 (KitKat). It is safe to use them, as they are inlined
+            // Note that some of these constants are new as of com.jvillalba.apod.dm.API 16 (Jelly Bean)
+            // and com.jvillalba.apod.dm.API 19 (KitKat). It is safe to use them, as they are inlined
             // at compile-time and do nothing on earlier devices.
             mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                     | View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -91,7 +94,11 @@ public class ImageActivity extends AppCompatActivity {
             }
         });
 
-        Picasso.with(this).load(hdURL).error(R.mipmap.ic_launcher_foreground).into((ImageView) mContentView);
+        Picasso.with(this)
+                .load(hdURL)
+                .error(R.mipmap.ic_launcher_foreground)
+                .memoryPolicy(NO_STORE)
+                .into((ImageView) mContentView);
 
     }
 

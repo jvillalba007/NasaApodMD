@@ -19,10 +19,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jvillalba.apod.dm.R;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-import model.NASA;
-import model.PicassoDownloader;
+import com.jvillalba.apod.dm.model.NASA;
+import com.jvillalba.apod.dm.model.PicassoDownloader;
+
+import static com.squareup.picasso.MemoryPolicy.NO_STORE;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -120,6 +123,8 @@ public class ViewActivity extends AppCompatActivity {
     private void downloadPicasso(String imageName) {
             Picasso.with(this)
                     .load(nasaAPOD.getUrl())
+                    .memoryPolicy(NO_STORE)
+                    .networkPolicy(NetworkPolicy.OFFLINE)
                     .into(new PicassoDownloader(imageName, this));
 
     }
@@ -173,7 +178,13 @@ public class ViewActivity extends AppCompatActivity {
 
     private void setDataNasaAPOD(NASA nasaAPOD) {
         imageAPOD = findViewById(R.id.imageAPOD);
-        Picasso.with(this).load(nasaAPOD.getUrl()).error(R.mipmap.ic_launcher_foreground).fit().into(imageAPOD);
+        Picasso.with(this)
+                .load(nasaAPOD.getUrl())
+                .error(R.mipmap.ic_launcher_foreground)
+                .fit()
+                .memoryPolicy(NO_STORE)
+                .networkPolicy(NetworkPolicy.OFFLINE)
+                .into(imageAPOD);
 
         TextView textTitle = findViewById(R.id.textTitle);
         textTitle.setText(getConcat(textTitle,nasaAPOD.getTitle()));

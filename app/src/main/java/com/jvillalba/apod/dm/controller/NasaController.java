@@ -1,13 +1,13 @@
-package controller;
+package com.jvillalba.apod.dm.controller;
 
 import android.support.annotation.NonNull;
 
 import java.util.List;
 
-import API.API;
-import API.ApiService.NASAServices;
-import adapter.MyAdapter;
-import model.NASA;
+import com.jvillalba.apod.dm.API.API;
+import com.jvillalba.apod.dm.API.ApiService.NASAServices;
+import com.jvillalba.apod.dm.adapter.MyAdapter;
+import com.jvillalba.apod.dm.model.NASA;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,11 +27,7 @@ public class NasaController {
                         List<NASA> nasaAPOD = response.body();
                         mAdapter.addAll(nasaAPOD);
                         break;
-                    case 401:
-
-                        break;
                     default:
-
                         break;
                 }
             }

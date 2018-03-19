@@ -11,9 +11,9 @@ import android.view.MenuItem;
 
 import com.jvillalba.apod.dm.R;
 
-import adapter.MyAdapter;
-import controller.NasaController;
-import model.NASA;
+import com.jvillalba.apod.dm.adapter.MyAdapter;
+import com.jvillalba.apod.dm.controller.NasaController;
+import com.jvillalba.apod.dm.model.NASA;
 
 public class MainActivity extends AppCompatActivity {
 

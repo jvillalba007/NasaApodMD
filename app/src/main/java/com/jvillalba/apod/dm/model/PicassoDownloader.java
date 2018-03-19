@@ -1,4 +1,4 @@
-package model;
+package com.jvillalba.apod.dm.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -26,14 +26,13 @@ public class PicassoDownloader implements Target {
     @Override
     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom arg1) {
         String path = Environment.getExternalStorageDirectory().getPath().concat(File.separator).concat(folder_apod).concat(File.separator);
-        File file = new File(path);
-        if (!file.exists()) {
-            file.mkdirs();
-        }
-        String pathFile = path.concat(name);
-        file = new File(pathFile);
         try {
-
+            File file = new File(path);
+            if (!file.exists()) {
+                file.mkdirs();
+            }
+            String pathFile = path.concat(name);
+            file = new File(pathFile);
             file.createNewFile();
             FileOutputStream ostream = new FileOutputStream(file);
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
@@ -47,5 +46,6 @@ public class PicassoDownloader implements Target {
 
     @Override
     public void onBitmapFailed(Drawable arg0) {
+        Toast.makeText(context,"ERROR to Download Image",Toast.LENGTH_SHORT).show();
     }
 }
