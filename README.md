@@ -7,9 +7,8 @@ NASA Astronomy Picture of the Day with Material Design
 
 App Icon by Icons8 (http://icons8.com/license/)
 
-* Get Images from NASA (APOD) 
-* Read descriptions of images to learn more about them 
-* ¡Download Your Favorites Images 
-* View in FullScreen
+* View Images from NASA
+* Read Descriptions of Images to Learn More About Them
+* Download Your Favorites Images
 
 ### Donate: paypal.me/fightinghawk
