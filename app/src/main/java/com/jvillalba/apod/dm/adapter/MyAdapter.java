@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 
 import com.jvillalba.apod.dm.R;
-import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -91,7 +90,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
                     .error(R.mipmap.ic_launcher_foreground)
                     .fit()
                     .memoryPolicy(NO_STORE)
-                    .networkPolicy(NetworkPolicy.NO_STORE)
                     .into(imageViewPoster);
 
             itemView.setOnClickListener(new View.OnClickListener() {
