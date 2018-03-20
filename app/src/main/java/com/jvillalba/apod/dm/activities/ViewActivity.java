@@ -183,7 +183,6 @@ public class ViewActivity extends AppCompatActivity {
                 .error(R.mipmap.ic_launcher_foreground)
                 .fit()
                 .memoryPolicy(NO_STORE)
-                .networkPolicy(NetworkPolicy.OFFLINE)
                 .into(imageAPOD);
 
         TextView textTitle = findViewById(R.id.textTitle);

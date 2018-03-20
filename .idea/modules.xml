@@ -4,9 +4,7 @@
     <modules>
       <module fileurl="file://C:\Users\Javier Villalba\AndroidStudioProjects\NasaApodMD\NASAAPOD.iml" filepath="C:\Users\Javier Villalba\AndroidStudioProjects\NasaApodMD\NASAAPOD.iml" />
       <module fileurl="file://$PROJECT_DIR$/NasaApodMD.iml" filepath="$PROJECT_DIR$/NasaApodMD.iml" />
-      <module fileurl="file://C:\Users\Javier Villalba\AndroidStudioProjects\NasaApodMD\NasaApodMD.iml" filepath="C:\Users\Javier Villalba\AndroidStudioProjects\NasaApodMD\NasaApodMD.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Javier Villalba\AndroidStudioProjects\NasaApodMD\app\app.iml" filepath="C:\Users\Javier Villalba\AndroidStudioProjects\NasaApodMD\app\app.iml" />
     </modules>
   </component>
 </project>

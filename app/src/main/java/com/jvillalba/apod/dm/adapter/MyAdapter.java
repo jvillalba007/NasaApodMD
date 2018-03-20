@@ -17,7 +17,6 @@ import java.util.List;
 
 import com.jvillalba.apod.dm.model.NASA;
 
-import static com.squareup.picasso.MemoryPolicy.NO_CACHE;
 import static com.squareup.picasso.MemoryPolicy.NO_STORE;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>

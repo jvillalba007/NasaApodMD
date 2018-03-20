@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.jvillalba.apod.dm.R;
-import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import static com.squareup.picasso.MemoryPolicy.NO_STORE;
