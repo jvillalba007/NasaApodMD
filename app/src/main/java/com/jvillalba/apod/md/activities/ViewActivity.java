@@ -172,8 +172,8 @@ public class ViewActivity extends AppCompatActivity {
 
     @NonNull
     private String getImageNameApod() {
-        int index = nasaAPOD.getHdurl().lastIndexOf('/');
-        return nasaAPOD.getHdurl().substring(index +1);
+        int index = nasaAPOD.getUrl().lastIndexOf('/');
+        return nasaAPOD.getUrl().substring(index +1);
     }
 
     private void setDataNasaAPOD(NASA nasaAPOD) {
