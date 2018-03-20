@@ -1,4 +1,4 @@
-package com.jvillalba.apod.dm.API;
+package com.jvillalba.apod.md.API;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,4 +1,4 @@
-package com.jvillalba.apod.dm.activities;
+package com.jvillalba.apod.md.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.jvillalba.apod.dm.R;
+import com.jvillalba.apod.md.R;
 
-import com.jvillalba.apod.dm.adapter.MyAdapter;
-import com.jvillalba.apod.dm.controller.NasaController;
-import com.jvillalba.apod.dm.model.NASA;
+import com.jvillalba.apod.md.adapter.MyAdapter;
+import com.jvillalba.apod.md.controller.NasaController;
+import com.jvillalba.apod.md.model.NASA;
 
 public class MainActivity extends AppCompatActivity {
 

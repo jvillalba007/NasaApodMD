@@ -1,4 +1,4 @@
-package com.jvillalba.apod.dm.activities;
+package com.jvillalba.apod.md.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -18,12 +18,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jvillalba.apod.dm.R;
+import com.jvillalba.apod.md.R;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-import com.jvillalba.apod.dm.model.NASA;
-import com.jvillalba.apod.dm.model.PicassoDownloader;
+import com.jvillalba.apod.md.model.NASA;
+import com.jvillalba.apod.md.model.PicassoDownloader;
 
 import static com.squareup.picasso.MemoryPolicy.NO_STORE;
 

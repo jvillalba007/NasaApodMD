@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jvillalba.apod.dm">
+    package="com.jvillalba.apod.md">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.jvillalba.apod.dm.activities.MainActivity"
+            android:name="com.jvillalba.apod.md.activities.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,16 +24,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jvillalba.apod.dm.activities.ViewActivity"
-            android:parentActivityName="com.jvillalba.apod.dm.activities.MainActivity"
+            android:name="com.jvillalba.apod.md.activities.ViewActivity"
+            android:parentActivityName="com.jvillalba.apod.md.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.jvillalba.apod.dm.activities.MainActivity"
+                android:value="com.jvillalba.apod.md.activities.MainActivity"
 />
         </activity>
         <activity
-            android:name="com.jvillalba.apod.dm.activities.ImageActivity"
+            android:name="com.jvillalba.apod.md.activities.ImageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_image"
             android:theme="@style/FullscreenTheme"

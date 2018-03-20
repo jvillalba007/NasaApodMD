@@ -1,4 +1,4 @@
-package com.jvillalba.apod.dm.model;
+package com.jvillalba.apod.md.model;
 
 import java.io.Serializable;
 

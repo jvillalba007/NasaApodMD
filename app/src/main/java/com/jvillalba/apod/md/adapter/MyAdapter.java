@@ -1,4 +1,4 @@
-package com.jvillalba.apod.dm.adapter;
+package com.jvillalba.apod.md.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,13 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.jvillalba.apod.dm.R;
+import com.jvillalba.apod.md.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jvillalba.apod.dm.model.NASA;
+import com.jvillalba.apod.md.model.NASA;
 
 import static com.squareup.picasso.MemoryPolicy.NO_STORE;
 

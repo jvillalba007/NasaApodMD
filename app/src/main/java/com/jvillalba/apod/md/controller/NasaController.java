@@ -1,13 +1,13 @@
-package com.jvillalba.apod.dm.controller;
+package com.jvillalba.apod.md.controller;
 
 import android.support.annotation.NonNull;
 
 import java.util.List;
 
-import com.jvillalba.apod.dm.API.API;
-import com.jvillalba.apod.dm.API.ApiService.NASAServices;
-import com.jvillalba.apod.dm.adapter.MyAdapter;
-import com.jvillalba.apod.dm.model.NASA;
+import com.jvillalba.apod.md.API.API;
+import com.jvillalba.apod.md.API.ApiService.NASAServices;
+import com.jvillalba.apod.md.adapter.MyAdapter;
+import com.jvillalba.apod.md.model.NASA;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

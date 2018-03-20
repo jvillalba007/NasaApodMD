@@ -1,4 +1,4 @@
-package com.jvillalba.apod.dm.model;
+package com.jvillalba.apod.md.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;
