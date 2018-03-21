@@ -3,6 +3,7 @@ package com.jvillalba.apod.md.model;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.media.MediaScannerConnection;
 import android.os.Environment;
 import android.widget.Toast;
 
@@ -15,9 +16,9 @@ import java.io.FileOutputStream;
 public class PicassoDownloader implements Target {
     private final String name;
     private final Context context;
-    private final String folder_apod = "NasaApod";
+    private final String folder_apod = "/NasaApod/";
     public PicassoDownloader(String name,Context context) {
-        this.name = name;
+        this.name = name.concat(".png");
         this.context = context;
     }
     @Override
@@ -25,19 +26,29 @@ public class PicassoDownloader implements Target {
     }
     @Override
     public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom arg1) {
-        String path = Environment.getExternalStorageDirectory().getPath().concat(File.separator).concat(folder_apod).concat(File.separator);
+            saveImage(bitmap);
+    }
+
+    private void saveImage(Bitmap bitmap) {
+        File folderDir = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES).getPath() + folder_apod);
+        folderDir.mkdirs();
+        File file = new File(folderDir,name);
         try {
-            File file = new File(path);
-            if (!file.exists()) {
-                file.mkdirs();
-            }
-            String pathFile = path.concat(name);
-            file = new File(pathFile);
+            if(!file.isFile()) {
             file.createNewFile();
             FileOutputStream ostream = new FileOutputStream(file);
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
             ostream.close();
-            Toast.makeText(context,pathFile,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Download OK. /Pictures/NasaApod/",Toast.LENGTH_SHORT).show();
+                MediaScannerConnection.scanFile(context,
+                        new String[]{file.toString()}, null, null);
+
+            } else {
+                Toast.makeText(context,"This image has already been downloaded", Toast.LENGTH_SHORT).show();
+            }
+
+
 
         } catch (Exception e) {
             Toast.makeText(context,"ERROR to Write Image",Toast.LENGTH_SHORT).show();

@@ -19,13 +19,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jvillalba.apod.md.R;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
-
 import com.jvillalba.apod.md.model.NASA;
 import com.jvillalba.apod.md.model.PicassoDownloader;
-
-import static com.squareup.picasso.MemoryPolicy.NO_STORE;
+import com.squareup.picasso.NetworkPolicy;
+import com.squareup.picasso.Picasso;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -76,16 +73,9 @@ public class ViewActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.download:
-                try {
                     imageName = getImageNameApod();
                     checkPermission(imageName);
-                }
-                catch (Exception e) {
-                    Toast.makeText(this, "Download Image Fail", Toast.LENGTH_SHORT).show();
-                }
-                finally {
                     return true;
-                }
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -120,13 +110,11 @@ public class ViewActivity extends AppCompatActivity {
         }
     }
 
-    private void downloadPicasso(String imageName) {
-            Picasso.with(this)
-                    .load(nasaAPOD.getUrl())
-                    .memoryPolicy(NO_STORE)
-                    .networkPolicy(NetworkPolicy.OFFLINE)
-                    .into(new PicassoDownloader(imageName, this));
-
+    private void downloadPicasso(final String imageName) {
+        Picasso.with(this)
+                .load(nasaAPOD.getUrl())
+                .networkPolicy(NetworkPolicy.OFFLINE)
+                .into(new PicassoDownloader(imageName, this));
     }
 
     private void OlderVersions(String imageName) {
@@ -173,7 +161,8 @@ public class ViewActivity extends AppCompatActivity {
     @NonNull
     private String getImageNameApod() {
         int index = nasaAPOD.getUrl().lastIndexOf('/');
-        return nasaAPOD.getUrl().substring(index +1);
+        String fileName = nasaAPOD.getUrl().substring(index +1);
+        return fileName.substring(0, fileName.lastIndexOf("."));
     }
 
     private void setDataNasaAPOD(NASA nasaAPOD) {
@@ -182,7 +171,6 @@ public class ViewActivity extends AppCompatActivity {
                 .load(nasaAPOD.getUrl())
                 .error(R.mipmap.ic_launcher_foreground)
                 .fit()
-                .memoryPolicy(NO_STORE)
                 .into(imageAPOD);
 
         TextView textTitle = findViewById(R.id.textTitle);

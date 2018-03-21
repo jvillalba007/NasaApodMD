@@ -88,7 +88,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
                     .load(nasa.getUrl())
                     .error(R.mipmap.ic_launcher_foreground)
                     .fit()
-                    .memoryPolicy(NO_STORE)
                     .into(imageViewPoster);
 
             itemView.setOnClickListener(new View.OnClickListener() {
