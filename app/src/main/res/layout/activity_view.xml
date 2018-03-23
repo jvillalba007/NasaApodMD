@@ -79,7 +79,8 @@
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textIsSelectable="true"/>
+            android:textIsSelectable="true"
+            android:gravity="top|start"/>
 
     </RelativeLayout>
 
