@@ -8,16 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.jvillalba.apod.md.R;
+import com.jvillalba.apod.md.model.NASA;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.jvillalba.apod.md.model.NASA;
-
-import static com.squareup.picasso.MemoryPolicy.NO_STORE;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
 {

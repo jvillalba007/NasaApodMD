@@ -10,10 +10,10 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -182,9 +182,9 @@ public class ViewActivity extends AppCompatActivity {
         TextView copyright = findViewById(R.id.copyright);
         copyright.setText(getConcat(copyright,nasaAPOD.getCopyright()));
 
-        TextView explanationView = findViewById(R.id.explanation);
+        EditText explanationView = findViewById(R.id.explanation);
         explanationView.setText(nasaAPOD.getExplanation());
-        explanationView.setMovementMethod(new ScrollingMovementMethod());
+
     }
 
     @NonNull
