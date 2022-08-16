@@ -28,6 +28,7 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="18sp"
+        android:textColor="#626262"
         android:textStyle="bold" />
 
 </android.support.v7.widget.CardView>
